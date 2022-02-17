@@ -1,109 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-     <!-- sttylesheet linked -->
-    <link rel="stylesheet" href="style.css">
+    <!-- sttylesheet linked -->
+    <link rel="stylesheet" href="style.css" />
     <!-- google font linked -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
     <header>
-            <h2 class="header-text"> Expenditure & Savings Calculator</h2>
+      <h2 class="header-text">Expenditure & Savings Calculator</h2>
     </header>
     <main>
-        <section class="container-div" id="container-section">
-            <!--**********************
+      <section class="container-div" id="container-section">
+        <!--**********************
                  image-section started
                 *********************** -->
-            <div class="first-div" id="image-section">
-                <img class="main-image" src="image/money.jpg" alt="">
-            </div>
-                   <!--**********************
+        <div class="first-div" id="image-section">
+          <img class="main-image" src="image/money.jpg" alt="" />
+        </div>
+        <!--**********************
                  image-section end
                 *********************** -->
 
-
-             <!--**********************
+        <!--**********************
                  data-section started
                 *********************** -->
-            <div class="second-inner-div" id="data-section">
-
-                <div class="first-second-inner-div">
-                    <h3 class="income-text">Income</h3>
-                    <!-- input-error -->
-                    <div class="income-error">
-                        <p id="income-error1">plz enter any number</p>
-                    </div>
-                    <div class="inside-first-second-inner-div">
-                      Income  :    <input  class="input-data" id="first-input" type="text">
-                    </div>
-                    <h3 class="income-text">Expenses</h3>
-                    <div class="inside-second-second-inner-div">
-                        Food  :    <input class="input-data" id="second-input" type="text">
-                    </div> 
-                      <!-- input-error -->
-                       <div class="income-error">
-                        <p id="income-error2">plz enter any number</p>
-                    </div>
-                     <br>
-                    <div class="inside-second-second-inner-div">
-                        Rent  :    <input class="input-data" id="third-input" type="text">
-                    </div> 
-                        <!-- input-error -->
-                       <div class="income-error">
-                        <p id="income-error3">plz enter any number</p>
-                    </div>
-                     <br>
-                    <div class="inside-second-second-inner-div">
-                        Clothes  :  <input class="input-data" id="fourth-input" type="text">
-                    </div>
-                        <!-- input-error -->
-                       <div class="income-error">
-                        <p id="income-error4">plz enter any number</p>
-                    </div>
-                    <br>
-                    <button id="calculate-button" class="btn"> Calculate </button>
-                    <!-- for showing alert -->
-                    <div class="toast">
-                        <p id="error1">sorry! you cant expense more than your income</p>
-                    </div>
-
-                </div>
-                <div class="second-second-inner-div">
-                    <h3>Total Expenses : <span id="total-expenses"> 00</span></h3>
-                    <h3>Balance : <span id="balance"> 00</span></h3>
-                </div>
-                <div class="third-second-inner-div">
-
-                     <div class="inside-second-second-inner-div">
-                        Save:  <input class="input-data" id="fifth-input" type="text"> % <button id="save-button" class="btn">Save</button>
-                    </div>
-                    <br>
-                      <div class="toast">
-                        <p id="error2">sorry! you cant save more than your balance</p>
-                       </div>
-                      <h3>Save Amount : <span id="money-saved"> 00</span></h3>
-                    <h3>Remaining Balance : <span id="remaining-balance"> 00</span></h3>
-                  
-                </div>
-                   <!-- for showing alert -->
-                 
-
-
+        <div class="second-inner-div" id="data-section">
+          <div class="first-second-inner-div">
+            <h3 class="income-text">Income</h3>
+            <!-- input-error -->
+            <div class="income-error">
+              <p id="income-error1">plz enter any number</p>
             </div>
+            <div class="inside-first-second-inner-div">
+              Income : <input class="input-data" id="first-input" type="text" />
+            </div>
+            <h3 class="income-text">Expenses</h3>
+            <div class="inside-second-second-inner-div">
+              Food : <input class="input-data" id="second-input" type="text" />
+            </div>
+            <!-- input-error -->
+            <div class="income-error">
+              <p id="income-error2">plz enter any number</p>
+            </div>
+            <br />
+            <div class="inside-second-second-inner-div">
+              Rent : <input class="input-data" id="third-input" type="text" />
+            </div>
+            <!-- input-error -->
+            <div class="income-error">
+              <p id="income-error3">plz enter any number</p>
+            </div>
+            <br />
+            <div class="inside-second-second-inner-div">
+              Clothes :
+              <input class="input-data" id="fourth-input" type="text" />
+            </div>
+            <!-- input-error -->
+            <div class="income-error">
+              <p id="income-error4">plz enter any number</p>
+            </div>
+            <br />
+            <button id="calculate-button" class="btn">Calculate</button>
+            <!-- for showing alert -->
+            <div class="toast">
+              <p id="error1">sorry! you cant expense more than your income</p>
+            </div>
+          </div>
+          <div class="second-second-inner-div">
+            <h3>Total Expenses : <span id="total-expenses"> 00</span></h3>
+            <h3>Balance : <span id="balance"> 00</span></h3>
+          </div>
+          <div class="third-second-inner-div">
+            <div class="inside-second-second-inner-div">
+              Save: <input class="input-data" id="fifth-input" type="text" /> %
+              <button id="save-button" class="btn">Save</button>
+            </div>
+            <br />
+            <div class="toast">
+              <p id="error2">sorry! you cant save more than your balance</p>
+            </div>
+            <h3>Save Amount : <span id="money-saved"> 00</span></h3>
+            <h3>Remaining Balance : <span id="remaining-balance"> 00</span></h3>
+          </div>
+          <!-- for showing alert -->
+        </div>
 
-               <!--**********************
+        <!--**********************
                  data-section end
                 *********************** -->
-        </section>
+      </section>
     </main>
-    <script src="js/index.js">
-
-    </script>
-</body>
+    <script src="js/index.js"></script>
+  </body>
 </html>
