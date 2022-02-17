@@ -37,11 +37,13 @@
               <p id="income-error1">plz enter any number</p>
             </div>
             <div class="inside-first-second-inner-div">
-              Income : <input class="input-data" id="first-input" type="text" />
+              Income :
+              <input class="input-data" id="first-input" type="number" />
             </div>
             <h3 class="income-text">Expenses</h3>
             <div class="inside-second-second-inner-div">
-              Food : <input class="input-data" id="second-input" type="text" />
+              Food :
+              <input class="input-data" id="second-input" type="number" />
             </div>
             <!-- input-error -->
             <div class="income-error">
@@ -49,7 +51,7 @@
             </div>
             <br />
             <div class="inside-second-second-inner-div">
-              Rent : <input class="input-data" id="third-input" type="text" />
+              Rent : <input class="input-data" id="third-input" type="number" />
             </div>
             <!-- input-error -->
             <div class="income-error">
@@ -58,18 +60,12 @@
             <br />
             <div class="inside-second-second-inner-div">
               Clothes :
-              <input class="input-data" id="fourth-input" type="text" />
-            </div>
-            <!-- input-error -->
-            <div class="income-error">
-              <p id="income-error4">plz enter any number</p>
+              <input class="input-data" id="fourth-input" type="number" />
             </div>
             <br />
             <button id="calculate-button" class="btn">Calculate</button>
+            <br />
             <!-- for showing alert -->
-            <div class="toast">
-              <p id="error1">sorry! you cant expense more than your income</p>
-            </div>
           </div>
           <div class="second-second-inner-div">
             <h3>Total Expenses : <span id="total-expenses"> 00</span></h3>
@@ -77,13 +73,11 @@
           </div>
           <div class="third-second-inner-div">
             <div class="inside-second-second-inner-div">
-              Save: <input class="input-data" id="fifth-input" type="text" /> %
-              <button id="save-button" class="btn">Save</button>
+              Save: <input class="input-data" id="fifth-input" type="number" />
+              <br /><br />
+              % <button id="save-button" class="btn">Save</button>
             </div>
             <br />
-            <div class="toast">
-              <p id="error2">sorry! you cant save more than your balance</p>
-            </div>
             <h3>Save Amount : <span id="money-saved"> 00</span></h3>
             <h3>Remaining Balance : <span id="remaining-balance"> 00</span></h3>
           </div>

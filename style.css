@@ -1,112 +1,107 @@
-body {
-  width: 90%;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+body{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 /* header text */
-.header-text {
-  text-align: center;
-  font-size: 40px;
+.header-text{
+    text-align: center;
+    font-size: 40px;
 }
 /* container section started */
-.container-div {
-  display: flex;
+.container-div{
+    display: flex;
 }
-.container-div .first-div {
-  width: 65%;
-  /* margin: 100px; */
-  margin: 50px;
-  /* margin-top: 50px; */
-  margin-top: 10px;
+.container-div .first-div{
+    width: 65%;
+    /* margin: 100px; */
+    margin: 50px;
+    /* margin-top: 50px; */
+    margin-top: 10px;
 }
-.container-div .second-inner-div {
-  width: 35%;
-  margin-top: 20px;
-  margin-right: 100px;
-  text-align: end;
-  font-size: 20px;
+.container-div .second-inner-div{
+    width: 35%;
+    margin-top: 20px;
+    margin-right: 100px;
+    text-align:end;
+    font-size: 20px;
 }
 /* image-section started */
-.main-image {
-  width: 100%;
-  height: 110%;
+.main-image{
+    width: 100%;
+    height: 110%;
 }
 /* second-inner-div stylesheet */
 
-.second-inner-div h3 {
-  font-size: 24px;
-  /* text-align: center; */
-  margin-left: 50px;
+.second-inner-div h3{
+    font-size: 24px;
+    /* text-align: center; */
+    margin-left: 50px;
 }
-.second-inner-div .input-data {
-  padding: 10px;
-  background-color: rgb(217, 230, 230);
-  border: none;
+.second-inner-div .input-data{
+    padding: 10px;
+    background-color: rgb(217, 230, 230);
+    border: none;
 }
-.second-inner-div .btn {
-  background-color: blueviolet;
-  padding: 8px 16px;
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  text-align: justify;
+.second-inner-div .btn{
+    background-color: blueviolet;
+    padding: 8px 16px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    text-align: justify;
 }
 /* error div style */
-.income-error {
-  display: none;
-}
-#error1 {
-  display: none;
-  background-color: red;
-}
-#error2 {
-  display: none;
-  background-color: red;
+.income-error{
+    display: none;
 }
 
+
 /* making the website responsibe for mobile */
-@media screen and (max-width: 600px) {
-  body {
+@media screen and (max-width:600px){
+    body{
     width: 90%;
-  }
-  /* header text */
-  .header-text {
-    margin-top: 30px;
-    font-size: 24px;
-  }
-  /* container section started */
-  .container-div {
-    display: flex;
-    flex-direction: column;
-  }
-  .container-div .first-div {
+    }
+        /* header text */
+    .header-text{
+        margin-top: 30px;
+        font-size: 24px;
+    }
+    /* container section started */
+    .container-div{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-div .first-div{
     width: 90%;
     /* margin: 100px; */
     margin: 20px auto;
-  }
-  .container-div .second-inner-div {
+    }
+    .container-div .second-inner-div{
     width: 90%;
     margin: 0 auto;
     /* margin-top: 20px;
     margin-right: 100px; */
     padding-right: 50px;
     font-size: 14px;
-  }
-  .main-image {
+    }
+    .main-image{
     width: 100%;
     height: auto;
-  }
-  .second-inner-div h3 {
+    }
+    .second-inner-div h3{
     font-size: 18px;
     margin-left: 0px;
-  }
-  .second-inner-div .btn {
+    }
+     .second-inner-div .btn{
     background-color: blueviolet;
     padding: 6px 10px;
     font-size: 16px;
-  }
+
+    }
+ 
 }

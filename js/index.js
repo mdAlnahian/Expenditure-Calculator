@@ -1,77 +1,91 @@
-// js started from here
-function inputDataCollection(serial) {
-  let firstInput = document.getElementById(serial + "-input");
-  let firstInputValue = firstInput.value;
-  if (firstInput.value > 0) {
-    let firstInputValueFloat = parseFloat(firstInputValue);
-    firstInput.value = firstInputValueFloat;
-    return firstInputValueFloat;
-  }
+function getInput(input) {
+  let takeInput = document.getElementById(input).value;
+  let takeInputValue = parseFloat(takeInput);
+  takeInput = takeInputValue;
+  return takeInput;
 }
-
-//total expenses calculating************//
-function totalExpenses() {
-  let primaryExpenses = document.getElementById("total-expenses");
-  let primaryExpensesData = primaryExpenses.innerText;
-    let primaryExpensesValue =
-      inputDataCollection("second") +
-      inputDataCollection("third") +
-      inputDataCollection("fourth");  
-    if (primaryExpensesValue <= inputDataCollection("first")) {
-      primaryExpenses.innerText = primaryExpensesValue;
-      return primaryExpensesValue;
-    } else {
-      let error1 = document.getElementById("error1");
-      error1.style.display = "block";
-    }
-} 
-//initial balance after giving the value of income
-function initialBalance() {
-  let initialBalanceAmount = document.getElementById("balance");
-  let initialBalanceAmountData = initialBalanceAmount.innerText;
-  let totalInitialBalance = 
-    inputDataCollection("first") - totalExpenses();
-    initialBalanceAmount.innerText = totalInitialBalance;
-  return totalInitialBalance;
-}
-// calculate button click event handeling
+//calculate button task
 document
   .getElementById("calculate-button")
   .addEventListener("click", function () {
-    //total primary expenses calling
-    totalExpenses();
-    // initial bance
-    initialBalance();
+    inputValidation();
+    getInput("first-input");
+    //calling total expenses
+    totalExpensesSum();
+    //calling for displaying total cost
+    showTheOutputOfExpenses();
+    //calling for showing primary remaining balance
+    showTheOutputOfRemainingBalance();
   });
-
-function savingPercentageAmount() {
-  let savingPercentage = document.getElementById("fifth-input");
-  let savingPercentageText = savingPercentage.value;
-  if (savingPercentage.value > 0) {
-    let savingPercentageTextFloat = parseFloat(savingPercentageText);
-    return savingPercentageTextFloat;
+// input validation
+function inputValidation() {
+  if (
+    getInput("first-input") > 0 &&
+    getInput("second-input") > 0 &&
+    getInput("third-input") > 0 &&
+    getInput("fourth-input") > 0
+  ) {
+    return (
+      getInput("first-input"),
+      getInput("second-input"),
+      getInput("third-input"),
+      getInput("fourth-input")
+    );
+  } else {
+    alert("plz enter any number larger than zero");
   }
 }
-// save amount function with error
+// sum of expensese function
+function totalExpensesSum() {
+  const expensesSum =
+    getInput("second-input") +
+    getInput("third-input") +
+    getInput("fourth-input");
+  return expensesSum;
+}
+// total expenses function
+
+function showTheOutputOfExpenses() {
+  let totalExpensesOutput = document.getElementById("total-expenses");
+  let totalExpensesOutputData = totalExpensesOutput.innerText;
+  if (totalExpensesSum() <= getInput("first-input")) {
+    totalExpensesOutput.innerText = totalExpensesSum();
+    return totalExpensesOutput.innerText;
+  } else {
+    alert("A freindly reminder that you cant expense more than your income");
+  }
+}
+
+//function for showing The Output Of remaining balancesnses
+function showTheOutputOfRemainingBalance() {
+  let totalRemainingOutput = document.getElementById("balance");
+  let totalRemainingOutputData = totalRemainingOutput.innerText;
+  let remainingBalance = getInput("first-input") - totalExpensesSum();
+  totalRemainingOutput.innerText = remainingBalance;
+  return totalRemainingOutput.innerText;
+}
+//function save button task
 function saveYourMoney() {
   let moneyInput = document.getElementById("money-saved");
   let moneyInputData = moneyInput.innerText;
-  let savingMoney =
-    (savingPercentageAmount() * inputDataCollection("first")) / 100;
-  //error2 msg
-  if (savingMoney > initialBalance()) {
-    let error1 = document.getElementById("error2");
-    error1.style.display = "block";
+  if (getInput("fifth-input") > 0) {
+    let savingMoney = (getInput("fifth-input") * getInput("first-input")) / 100;
+    if (savingMoney > showTheOutputOfRemainingBalance()) {
+      alert("sorry! you cant save more than your balance");
+    } else {
+      moneyInput.innerText = savingMoney;
+      return savingMoney;
+    }
   } else {
-     moneyInput.innerText = savingMoney;
-     return savingMoney;
+    alert("plz give enter a number");
   }
 }
+//
 //remaining money after savings
 function remainingMoneyAfterSavings() {
   let remainingMoney = document.getElementById("remaining-balance");
   let remainingMoneyDataType = remainingMoney.innerText;
-  let remainingMoneyData = initialBalance() - saveYourMoney();
+  let remainingMoneyData = showTheOutputOfRemainingBalance() - saveYourMoney();
   remainingMoney.innerText = remainingMoneyData;
   return remainingMoneyData;
 }
