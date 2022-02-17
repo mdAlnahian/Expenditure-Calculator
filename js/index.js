@@ -2,27 +2,20 @@
 function inputDataCollection(serial) {
   let firstInput = document.getElementById(serial + "-input");
   let firstInputValue = firstInput.value;
-  //erroe check
-  // if (firstInput.value > 0) {
-  //   let firstInputValueFloat = parseFloat(firstInputValue);
-  //   firstInput.value = firstInputValueFloat;
-  //   console.log(firstInput.value);
-  //   return firstInputValueFloat;
-  // } else {
-  //   console.log("error");
-  // }
-
-  //   if (typeof firstInput.value !== "number") {
-  //     console.log("please! give any number for", serial);
-  //   } else {
-  //     console.log("tik ase");
-
-  //eikhane rak
+  //error check
+  if (firstInput.value > 0) {
+    let firstInputValueFloat = parseFloat(firstInputValue);
+    firstInput.value = firstInputValueFloat;
+    // console.log(firstInput.value);
+    return firstInputValueFloat;
+  } else {
+    
+  }
   //
-  let firstInputValueFloat = parseFloat(firstInputValue);
-  firstInput.value = firstInputValueFloat;
-  console.log(firstInput.value);
-  return firstInputValueFloat;
+  // let firstInputValueFloat = parseFloat(firstInputValue);
+  // firstInput.value = firstInputValueFloat;
+  // console.log(firstInput.value);
+  // return firstInputValueFloat;
 }
 
 // calculate button click event handeling
