@@ -8,31 +8,14 @@ function inputDataCollection(serial) {
     firstInput.value = firstInputValueFloat;
     // console.log(firstInput.value);
     return firstInputValueFloat;
-  } else {
-    
   }
   //
-  // let firstInputValueFloat = parseFloat(firstInputValue);
-  // firstInput.value = firstInputValueFloat;
-  // console.log(firstInput.value);
-  // return firstInputValueFloat;
 }
 
 // calculate button click event handeling
 document
   .getElementById("calculate-button")
   .addEventListener("click", function () {
-    //calling every single input
-    // let firstInputFunction = inputDataCollection("first");
-    // let secondInputFunction = inputDataCollection("second");
-    // let thirdInputFunction = inputDataCollection("third");
-    // let fourthInputFunction = inputDataCollection("fourth");
-    // let fifthInputFunction = inputDataCollection("fifth");
-    //error chexk
-    if (typeof inputDataCollection("first") !== "number") {
-      let error1 = document.getElementById("income-error1");
-      error1.style.display = "block";
-    }
     //total primary expenses calling
     totalExpenses();
     // initial bance
