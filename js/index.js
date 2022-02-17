@@ -2,14 +2,11 @@
 function inputDataCollection(serial) {
   let firstInput = document.getElementById(serial + "-input");
   let firstInputValue = firstInput.value;
-  //error check
   if (firstInput.value > 0) {
     let firstInputValueFloat = parseFloat(firstInputValue);
     firstInput.value = firstInputValueFloat;
-    // console.log(firstInput.value);
     return firstInputValueFloat;
   }
-  //
 }
 
 // calculate button click event handeling
@@ -61,8 +58,10 @@ document.getElementById("save-button").addEventListener("click", function () {
 function savingPercentageAmount() {
   let savingPercentage = document.getElementById("fifth-input");
   let savingPercentageText = savingPercentage.value;
-  let savingPercentageTextFloat = parseFloat(savingPercentageText);
-  return savingPercentageTextFloat;
+  if (savingPercentage.value > 0) {
+    let savingPercentageTextFloat = parseFloat(savingPercentageText);
+    return savingPercentageTextFloat;
+  }
 }
 // save amount function with error
 function saveYourMoney() {
